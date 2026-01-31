@@ -1,8 +1,11 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [dark, setDark] = useState(true);
+
   return (
-    <>
+    <div className={dark ? "dark" : "light"}>
       {/* Navbar */}
       <nav className="navbar">
         <h2 className="logo">Hans</h2>
@@ -11,26 +14,30 @@ function App() {
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
+        <button className="toggle" onClick={() => setDark(!dark)}>
+          {dark ? "☀️" : "🌙"}
+        </button>
       </nav>
 
       {/* Hero */}
       <section className="hero">
+        <img src="/profile.jpg" alt="Profile" className="profile" />
         <h1>Hans Tom Sojan</h1>
         <p>Frontend Developer • React Beginner</p>
-        <a href="#projects" className="btn">Explore My Work</a>
+        <a href="#projects" className="btn">View Projects</a>
       </section>
 
       {/* About */}
-      <section className="section" id="about">
+      <section className="section reveal" id="about">
         <h2>About Me</h2>
         <p>
-          I am a passionate beginner frontend developer learning React.
-          I love building clean, modern, and user-friendly websites.
+          I’m a passionate beginner frontend developer learning React.
+          I love building beautiful, interactive user interfaces.
         </p>
       </section>
 
       {/* Skills */}
-      <section className="section" id="skills">
+      <section className="section reveal" id="skills">
         <h2>Skills</h2>
         <div className="skills">
           <span>HTML</span>
@@ -41,17 +48,16 @@ function App() {
       </section>
 
       {/* Projects */}
-      <section className="section" id="projects">
+      <section className="section reveal" id="projects">
         <h2>Projects</h2>
         <div className="projects">
           <div className="card">
             <h3>Portfolio Website</h3>
-            <p>Modern portfolio built using React & Vite.</p>
+            <p>Modern animated portfolio using React & Vite.</p>
           </div>
-
           <div className="card">
-            <h3>Coming Soon</h3>
-            <p>More exciting projects on the way.</p>
+            <h3>More Coming</h3>
+            <p>Exciting projects coming soon.</p>
           </div>
         </div>
       </section>
@@ -59,7 +65,7 @@ function App() {
       <footer>
         <p>© 2026 Hans Tom Sojan</p>
       </footer>
-    </>
+    </div>
   );
 }
 
