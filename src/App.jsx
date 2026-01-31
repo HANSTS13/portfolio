@@ -1,38 +1,55 @@
+import "./App.css";
+
 function App() {
   return (
     <div className="container">
-      <h1>Hi, I'm Hans 👋</h1>
-      <h2>Software Developer</h2>
-
-      <p>
-        I am a beginner React developer learning how to build modern web
-        applications.
-      </p>
-
-      <section>
-        <h3>Skills</h3>
-        <ul>
-          <li>C Programming</li>
-          <li>Java</li>
-          <li>Data Structures</li>
-          <li>React (Beginner)</li>
-        </ul>
+      {/* Hero Section */}
+      <section className="hero">
+        <h1>Hans Tom Sojan</h1>
+        <p>Frontend Developer | React Beginner</p>
+        <a href="#projects" className="btn">View My Work</a>
       </section>
 
-      <section>
-        <h3>Projects</h3>
-        <ul>
-          <li>Sparse Matrix Implementation in C</li>
-          <li>Bubble Sort Program</li>
-          <li>Portfolio Website (React)</li>
-        </ul>
+      {/* About Section */}
+      <section className="section">
+        <h2>About Me</h2>
+        <p>
+          I am a beginner frontend developer learning React.
+          I enjoy building simple, clean, and user-friendly websites.
+        </p>
       </section>
 
-      <section>
-        <h3>Contact</h3>
-        <p>Email: your-email@example.com</p>
-        <p>GitHub: https://github.com/your-username</p>
+      {/* Skills Section */}
+      <section className="section">
+        <h2>Skills</h2>
+        <div className="skills">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>React</span>
+        </div>
       </section>
+
+      {/* Projects Section */}
+      <section className="section" id="projects">
+        <h2>Projects</h2>
+        <div className="projects">
+          <div className="card">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio built with React and Vite.</p>
+          </div>
+
+          <div className="card">
+            <h3>Coming Soon</h3>
+            <p>More projects will be added.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer>
+        <p>© 2026 Hans Tom Sojan</p>
+      </footer>
     </div>
   );
 }
